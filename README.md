@@ -1,6 +1,7 @@
 # OCaml examples
 
-OCaml is a functional programming language that is as a fast as C. Here I share some examples that can be useful for people learning the language, you can compile online using https://try.ocamlpro.com/
+OCaml is a functional programming language that is as a fast as C. Ocaml code is also concise and easy to read.
+Here I share some examples that can be useful for people learning the language, you can compile online using https://try.ocamlpro.com/
 
 ▶ Recursive function tat calculates the sum of elements in a list:
 
