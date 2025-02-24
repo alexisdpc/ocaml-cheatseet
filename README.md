@@ -34,4 +34,5 @@ let rec list_concatenate : string list -> string = fun lst ->
 ;;
 
 list_concatenate ["test: "; "hello";" world"];;
+(* - : string = "test: hello world" *)
 ```
