@@ -1,4 +1,4 @@
-# OCaml examples
+# OCaml Examples
 
 OCaml is a functional programming language that can be as fast as C. Also, OCaml code is concise and easy to read.
 Here I share some examples that can be useful for people learning the language, you can compile online using https://try.ocamlpro.com/
