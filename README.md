@@ -1,4 +1,4 @@
-# ocaml-cheatseet
+# OCaml examples
 
 Recursive function tat calculates the sum of elements in a list:
 
