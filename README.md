@@ -24,3 +24,14 @@ let rec fibonacci n =
 ;;
 print_int (fibonacci 10)
 ```
+
+Concate strings in a list:
+```ocaml
+let rec list_concatenate : string list -> string = fun lst ->
+  match lst with
+  | [] -> ""
+  | hd :: tl -> hd ^ list_concatenate tl
+;;
+
+list_concatenate ["hello";" world"];;
+```
