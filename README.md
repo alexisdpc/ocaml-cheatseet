@@ -14,3 +14,13 @@ sum [1;2;3];;
 (* - : int = 6 *)
 
 ```
+
+Calculate the n-th Fibonacci number:
+```ocaml
+let rec fibonacci n =
+  if n < 1 then 0
+  else if n = 1 then 1
+  else (fibonacci (n - 1)) + (fibonacci (n - 2))
+;;
+print_int (fibonacci 10)
+```
