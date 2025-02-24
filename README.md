@@ -2,7 +2,7 @@
 
 OCaml is a functional programming language that is as a fast as C. Here I share some examples that can be useful for people learning the language, you can compile online using https://try.ocamlpro.com/
 
-Recursive function tat calculates the sum of elements in a list:
+▶ Recursive function tat calculates the sum of elements in a list:
 
 ```ocaml
 let rec sum l =
@@ -17,7 +17,7 @@ sum [1;2;3];;
 
 ```
 
-Calculate the n-th Fibonacci number:
+▶ Calculate the n-th Fibonacci number:
 ```ocaml
 let rec fibonacci n =
   if n < 1 then 0
@@ -27,7 +27,7 @@ let rec fibonacci n =
 print_int (fibonacci 10)
 ```
 
-Concate strings in a list:
+▶ Concatenate strings in a list:
 ```ocaml
 let rec list_concatenate : string list -> string = fun lst ->
   match lst with
