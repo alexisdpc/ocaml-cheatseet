@@ -50,14 +50,13 @@ let prime n =
   | 0 | 1 -> false
   | _ -> checkZero n (n-1) ;;
 ```
+
+▶ Return the maximum element from a list
 ```ocaml
-let rec list_max (lst : 'a list) : 'a option = 
-  match lst with 
-  | h :: t -> begin
-      match list_max t with
-      | None -> Some h 
-      | Some m -> Some (max h m) 
-    end
-  | [] -> None
+let rec list_max xs =
+  match xs with
+  | [] -> failwith "list_max called on empty list"
+  | [x] -> x
+  | x :: remainder -> max x (list_max remainder);;
 ```
 
