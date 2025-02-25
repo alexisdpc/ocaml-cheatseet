@@ -60,3 +60,16 @@ let rec list_max xs =
   | x :: remainder -> max x (list_max remainder);;
 ```
 
+▶ Greatest common divisor with system input
+```ocaml
+let rec gcd a b =
+  if b = 0 then a
+  else gcd b (a mod b);;
+
+let main () =
+  let a = int_of_string Sys.argv.(1) in
+  let b = int_of_string Sys.argv.(2) in
+  Printf.printf "%d\n" (gcd a b);
+  exit 0;;
+main ();;
+```
