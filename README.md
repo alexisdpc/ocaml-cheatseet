@@ -50,3 +50,14 @@ let prime n =
   | 0 | 1 -> false
   | _ -> checkZero n (n-1) ;;
 ```
+```ocaml
+let rec list_max (lst : 'a list) : 'a option = 
+  match lst with 
+  | h :: t -> begin
+      match list_max t with
+      | None -> Some h 
+      | Some m -> Some (max h m) 
+    end
+  | [] -> None
+```
+
