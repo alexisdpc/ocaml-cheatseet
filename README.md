@@ -39,3 +39,14 @@ let rec list_concatenate : string list -> string = fun lst ->
 list_concatenate ["test: "; "hello";" world"];;
 (* - : string = "test: hello world" *)
 ```
+
+▶ Check if number is prime:
+```ocaml
+let prime n =
+  let rec checkZero x d = match d with
+    | 1 -> true    
+    | _ -> (x mod d <> 0) && checkZero x (d-1)
+  in match n with
+  | 0 | 1 -> false
+  | _ -> checkZero n (n-1) ;;
+```
