@@ -71,5 +71,6 @@ let main () =
   let b = int_of_string Sys.argv.(2) in
   Printf.printf "%d\n" (gcd a b);
   exit 0;;
+
 main ();;
 ```
