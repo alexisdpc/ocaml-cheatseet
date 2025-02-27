@@ -51,7 +51,7 @@ let prime n =
   | _ -> checkZero n (n-1) ;;
 ```
 
-▶ Return the maximum element from a list
+▶ Return the largest element from a list
 ```ocaml
 let rec list_max xs =
   match xs with
