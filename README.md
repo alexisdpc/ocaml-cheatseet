@@ -3,7 +3,7 @@
 OCaml is a functional programming language that can be as fast as C. Also, OCaml code is concise and easy to read.
 Here I share some examples that can be useful for people learning the language, you can compile online using https://try.ocamlpro.com/
 
-To check out some algorithms check the [solutions][https://github.com/alexisdpc/ocaml-cheatseet/tree/main/Advent-Of-Code] to the Advent of Code programming challenge.
+To check out some algorithms check the [solutions](https://github.com/alexisdpc/ocaml-cheatseet/tree/main/Advent-Of-Code) to the Advent of Code programming challenge.
 
 ▶ Recursive function tat calculates the sum of elements in a list:
 
