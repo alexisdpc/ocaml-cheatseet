@@ -76,3 +76,15 @@ let main () =
 
 main ();;
 ```
+
+▶ Sum elements of a list
+```ocaml
+let rec sum list = 
+  match list with
+  | [] -> 0 
+  | first :: rest -> first + sum rest
+;;
+
+let y  = sum [1;4;5];;
+(*val y : int = 10 *)
+```
