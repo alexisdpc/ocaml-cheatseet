@@ -88,3 +88,22 @@ let rec sum list =
 let y  = sum [1;4;5];;
 (*val y : int = 10 *)
 ```
+
+▶ Error handling with exceptions
+```ocaml
+(* Define a custom exception for division by zero *)
+exception Division_by_zero
+
+(* Function that raises an exception on division by zero *)
+let safe_divide x y =
+  if y = 0 then raise Division_by_zero
+  else x / y
+
+(* Handling the exception with a try...with block *)
+let () =
+  try
+    let result = safe_divide 10 0 in
+    Printf.printf "Result: %d\n" result
+  with
+  | Division_by_zero -> Printf.printf "Error: Division by zero encountered.\n"
+```
