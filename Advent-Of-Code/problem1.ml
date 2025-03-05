@@ -4,6 +4,8 @@ let read_lines file =
 
 let result = read_lines "input.txt"
 
+(* Takes two list as inputs
+    e.g. group group ["10";"11";"";"40";"3"] [];;   outputs [43;21] *)
 let rec group input result =
   match input with
   | [] -> result
@@ -18,6 +20,8 @@ let rec group input result =
        | hd :: tail -> (hd + int_of_string cals) :: tail)
 ;;
 
+(*  Function that takes two inputs a list and an int e.g.
+    max_of_list [1;5;10;2] 1;; returns 10 *)
 let rec max_of_list input cur = 
   match input with
   | [] -> cur 
