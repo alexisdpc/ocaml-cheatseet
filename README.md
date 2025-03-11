@@ -107,3 +107,21 @@ let () =
   with
   | Division_by_zero -> Printf.printf "Error: Division by zero encountered.\n"
 ```
+
+▶ Permutation of an array
+```ocaml
+let permute array =
+  let length = Array.length array in
+  for i = 0 to length - 2 do
+(* pick a j to swap with *)
+    let j = i + Random.int (length - i) in
+(* Swap i and j *)
+    let tmp = array.(i) in
+    array.(i) <- array.(j);
+    array.(j) <- tmp
+  done
+;; 
+let ar = [|0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19|];; 
+permute ar;;
+ar;;
+```
