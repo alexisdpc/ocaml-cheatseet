@@ -113,9 +113,9 @@ let () =
 let permute array =
   let length = Array.length array in
   for i = 0 to length - 2 do
-(* pick a j to swap with *)
+    (* pick a j to swap with *)
     let j = i + Random.int (length - i) in
-(* Swap i and j *)
+    (* Swap i and j *)
     let tmp = array.(i) in
     array.(i) <- array.(j);
     array.(j) <- tmp
