@@ -140,5 +140,13 @@ let x = Mat.uniform 1000 500;;
 let v = Mat.uniform 1 500;;
 let u = Mat.tile v [|1000;1|];;
 Mat.(x + u);;
+
+let reverse x =
+    Mat.get_slice [ [-1; 0]; [-1; 0] ] x in
+    reverse x;;
+
+let rotate90 x =
+    Mat.(transpose x |> get_slice [ []; [-1;0] ]) in
+    rotate90 x;;    
 ```
 
