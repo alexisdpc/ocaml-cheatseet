@@ -128,6 +128,9 @@ ar;;
 
 ▶ Arrays and matrices:
 ```ocaml
+open Arr;
+open Mat;;
+
 (* Adds 1 to every element in the ndarray x,
    then returns a new ndarray y. *)
 let y = Arr.map (fun a -> a +.1) x;;
@@ -135,7 +138,6 @@ let y = Arr.map (fun a -> a +.1) x;;
 (*  x: 1000x500 matrix that contains 1000 samples each with 500 features
     v: 1x500 bias vector added to each feature 
     u: We must tile v so that it has the same shape as that of x *)
-open Mat;;
 let x = Mat.uniform 1000 500;;
 let v = Mat.uniform 1 500;;
 let u = Mat.tile v [|1000;1|];;
