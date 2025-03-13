@@ -125,3 +125,20 @@ let ar = [|0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19|
 permute ar;;
 ar;;
 ```
+
+▶ Arrays and matrices:
+```ocaml
+(* Adds 1 to every element in the ndarray x,
+   then returns a new ndarray y. *)
+let y = Arr.map (fun a -> a +.1) x;;
+
+(*  x: 1000x500 matrix that contains 1000 samples each with 500 features
+    v: 1x500 bias vector added to each feature 
+    u: We must tile v so that it has the same shape as that of x *)
+open Mat;;
+let x = Mat.uniform 1000 500;;
+let v = Mat.uniform 1 500;;
+let u = Mat.tile v [|1000;1|];;
+Mat.(x + u);;
+```
+
