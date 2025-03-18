@@ -152,3 +152,16 @@ let rotate90 x =
     rotate90 x;;    
 ```
 
+▶ Optional arguments:\
+We can make arguments to functions options immediately by prefixing arguments with ?.
+```ocaml
+let welcome ?greeting_opt name =
+     let greeting = 
+          match greeting_opt with
+          | Some greeting -> greeting
+          | None -> "Hi"
+     in
+     Printf.printf "%s %s\n" greeting name
+;;
+```
+
