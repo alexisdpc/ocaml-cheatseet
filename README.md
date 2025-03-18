@@ -172,5 +172,11 @@ let welcome ?greeting_opt name =
      in
      Printf.printf "%s %s\n" greeting name
 ;;
+
+welcome ~greeting_opt:"Hey" "reader" ;;
+
+welcome ?greeting_opt:None "reader"
+
+welcome "Reader";;
 ```
 
