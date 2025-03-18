@@ -62,6 +62,15 @@ let rec list_max xs =
   | x :: remainder -> max x (list_max remainder);;
 ```
 
+▶ Reverse list
+```ocaml
+let rec reverse lst acc =
+     match lst with 
+     | [] -> acc
+     | hd :: tl -> reverse tl (hd :: acc)
+;;
+```
+
 ▶ Greatest common divisor with system input
 ```ocaml
 let rec gcd a b =
