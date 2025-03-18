@@ -137,7 +137,7 @@ ar;;
 
 ▶ Arrays and matrices:
 ```ocaml
-open Arr;
+open Arr;;
 open Mat;;
 
 (* Adds 1 to every element in the ndarray x,
