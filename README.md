@@ -180,3 +180,14 @@ welcome ?greeting_opt:None "reader"
 welcome "Reader";;
 ```
 
+▶ Last element of list:
+```ocaml
+let rec last_element l = 
+  match l with
+  | [] -> failwith "Empty list" 
+  | [x] -> x
+  | hd :: tl -> last_element tl 
+;;
+```
+
+
