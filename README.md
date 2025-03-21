@@ -203,4 +203,9 @@ let () = assert(compress ["a";] = ["a";])
 let () = assert(compress ["a"; "a";] = ["a";])
 ```
 
+▶ Square elements of a list:
+```ocaml
+List.map (fun x -> x * x) [3; 5; 7; 9]
+```
+
 
