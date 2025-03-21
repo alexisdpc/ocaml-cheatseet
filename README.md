@@ -190,4 +190,17 @@ let rec last_element l =
 ;;
 ```
 
+▶ Eliminate consecutive duplicates of list elements:
+```ocaml
+let rec compress l =
+  match l with
+  | [] -> []
+  | [x] -> [x]
+  | x :: (y :: _ as tail) -> if x = y then compress tail else x :: compress tail
+
+let () = assert(compress ["a";"a";"a";"a";"b";"c";"c";"a";"a";"d";"e";"e";"e";"e"] = ["a"; "b"; "c"; "a"; "d"; "e"])
+let () = assert(compress ["a";] = ["a";])
+let () = assert(compress ["a"; "a";] = ["a";])
+```
+
 
