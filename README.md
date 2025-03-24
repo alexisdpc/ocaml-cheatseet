@@ -225,4 +225,25 @@ length [1;2;3;4;5;6;7;8;9;10;11;12;13;14;15];;
 (* - : int 15 *)
 ```
 
+▶ Exception handlers:
+```ocaml
+let rec find p = function 
+  | [] -> raise Not_found
+  | x :: xs -> if p x then x else find p xs
+(* val find : ( 'a -> bool) -> 'a list -> 'a = <fun> *)
+
+let x =
+  try 
+    let x = find (fun i -> i mod 2 = 0) [1;3;5] in 
+    Some (x + 2)
+  with Not_found -> None
+  (* val x : int option = None *)
+    
+let x =
+  match find (fun i -> i mod 2 = 0) [1;3;4] with
+  | y -> Some (y + 2)
+  | exception Not_found -> None
+(* val x : int option = some 6 *)
+```
+
 
