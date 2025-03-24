@@ -211,14 +211,14 @@ List.map (fun x -> x * x) [3; 5; 7; 9]
 ```
 ▶ Length of list:
 ```ocaml
-let rec length_plus_n l n =
+let rec length_helper l acc =
   match l with
-  | [] -> n
-  | _ :: tl -> length_plus_n tl (n + 1)
+  | [] -> acc
+  | _ :: tl -> length_helper tl (acc + 1)
 ;;
-(* val length_plus_n : 'a  list -> int -> int = <fun> *)
+(* val length_helper : 'a  list -> int -> int = <fun> *)
 
-let length l = length_plus_n l 0 ;;
+let length l = length_helper l 0 ;;
 (* val length : 'a list -> int = <fun> *)
 
 length [1;2;3;4;5;6;7;8;9;10;11;12;13;14;15];;
