@@ -203,9 +203,26 @@ let () = assert(compress ["a";] = ["a";])
 let () = assert(compress ["a"; "a";] = ["a";])
 ```
 
-▶ Square elements of a list:
+▶ List operations: append, concat and map.
 ```ocaml
+List.append [1;2;3] [4;5;6];;
+List.concat [[1;2];[3;4;5];[6];[]];;
 List.map (fun x -> x * x) [3; 5; 7; 9]
+```
+▶ Length of list:
+```ocaml
+let rec length_plus_n l n =
+  match l with
+  | [] -> n
+  | _ :: tl -> length_plus_n tl (n + 1)
+;;
+(* val length_plus_n : 'a  list -> int -> int = <fun> *)
+
+let length l = length_plus_n l 0 ;;
+(* val length : 'a list -> int = <fun> *)
+
+length [1;2;3;4;5;6;7;8;9;10;11;12;13;14;15];;
+(* - : int 15 *)
 ```
 
 
