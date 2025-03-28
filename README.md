@@ -225,6 +225,28 @@ length [1;2;3;4;5;6;7;8;9;10;11;12;13;14;15];;
 (* - : int 15 *)
 ```
 
+▶ Prepend and replicate elemnts in lists
+```ocaml
+let prepend l x = 
+  match l with
+  | [] -> []
+  | head :: tail -> x :: (head :: tail)
+;;
+
+let () = assert( prepend [1;2;3;4] 0  = [0;1;2;3;4]);;
+
+let replicate l n =
+  let rec prepend n acc x =
+    if n = 0 then acc else prepend (n-1) (x :: acc) x in
+  let rec aux acc = function
+    | [] -> acc
+    | head :: tail -> aux (prepend n acc head) tail in
+  aux [] (List.rev l);;
+
+let () = assert(replicate ["a";"b";"c";] 3 = ["a"; "a"; "a"; "b"; "b"; "b"; "c"; "c"; "c"])
+```
+
+
 ▶ Exception handlers:
 ```ocaml
 let rec find p = function 
