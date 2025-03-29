@@ -268,4 +268,22 @@ let x =
 (* val x : int option = some 6 *)
 ```
 
+▶ Operations with lists:
+```ocaml
+let numbers = [1; 2; 3; 4; 5]
+
+(* Double each number *)
+let doubled = List.map (fun x -> x * 2) numbers
+
+(* Filter even numbers *)
+let evens = List.filter (fun x -> x mod 2 = 0) numbers
+
+(* Combine both operations *)
+let doubled_evens = numbers |> List.filter (fun x -> x mod 2 = 0) |> List.map (fun x -> x * 2)
+
+let () =
+  List.iter (Printf.printf "%d ") doubled_evens  (* Output: 4 8 *)
+```
+
+
 
