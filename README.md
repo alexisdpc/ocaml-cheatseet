@@ -285,5 +285,25 @@ let () =
   List.iter (Printf.printf "%d ") doubled_evens  (* Output: 4 8 *)
 ```
 
+▶ Operations with Map:
+```ocaml
+module StringMap = Map.Make(String)
+
+let my_map =
+  StringMap.empty
+  |> StringMap.add "Alice" 25
+  |> StringMap.add "Bob" 30
+  |> StringMap.add "Charlie" 22
+
+(* Lookup a key safely *)
+let find_age name =
+  match StringMap.find_opt name my_map with
+  | Some age -> Printf.printf "%s is %d years old\n" name age
+  | None -> Printf.printf "%s not found\n" name
+
+let () =
+  find_age "Alice";  (* Output: Alice is 25 years old *)
+  find_age "Eve"     (* Output: Eve not found *)
+```
 
 
