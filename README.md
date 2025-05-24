@@ -323,7 +323,10 @@ let total_sum = List.fold_left sum_function 0 numbers
 
 (* Print the result *)
 let () = Printf.printf "The list is: [%s]\n" (String.concat "; " (List.map string_of_int numbers))
+(* Output: The list is: [1;2;3;4;5] *)
+
 let () = Printf.printf "The sum of the numbers is: %d\n" total_sum
+(* Output: The sum of the numbers is: 15 *)
 ```
 
 
