@@ -306,4 +306,24 @@ let () =
   find_age "Eve"     (* Output: Eve not found *)
 ```
 
+ ▶ Iterate through a list from left to right
+ ```ocaml
+(* Define a list of integers *)
+let numbers = [1; 2; 3; 4; 5]
+
+(* Define the function to be applied at each step:
+   'acc' is the accumulated sum so far.
+   'x' is the current element from the list. *)
+let sum_function acc x =
+  acc + x
+
+(* Use List.fold_left to sum the list *)
+(* The initial value for the accumulator ('init') is 0 *)
+let total_sum = List.fold_left sum_function 0 numbers
+
+(* Print the result *)
+let () = Printf.printf "The list is: [%s]\n" (String.concat "; " (List.map string_of_int numbers))
+let () = Printf.printf "The sum of the numbers is: %d\n" total_sum
+```
+
 
