@@ -206,8 +206,14 @@ let () = assert(compress ["a"; "a";] = ["a";])
 ▶ List operations: append, concat and map.
 ```ocaml
 List.append [1;2;3] [4;5;6];;
+(* int list = [1; 2; 3; 4; 5; 6] *)
+
 List.concat [[1;2];[3;4;5];[6];[]];;
+(* int list = [1; 2; 3; 4; 5; 6] *)
+
 List.map (fun x -> x * x) [3; 5; 7; 9]
+(* int list = [9; 25; 81] *)
+
 ```
 ▶ Length of list:
 ```ocaml
