@@ -1,3 +1,8 @@
+# October 2025 - Robot Baseball
+
+The pitcher can either throw a ball or a strike, while the batter can either wait or swing.\
+Here is the table with the different possibilities:
+
 | Batter \\ Pitcher | Ball                    | Strike                                  |
 |:------------------|:-----------------------:|:----------------------------------------:|
 | **Wait**          | $A \equiv V(b+1, s)$     | $B \equiv V(b, s+1)$                      |
