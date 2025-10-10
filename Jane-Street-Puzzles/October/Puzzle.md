@@ -17,7 +17,7 @@ Here is the table with the different possibilities:
 - At the critical point  $p^* \approx 0.227$, the batter’s threat of a Home Run is just strong enough to induce more balls earlier (raising balls before strikes) but not so strong that at-bats end too quickly with Home Runss. That trade-off peaks the full-count probability near 29.6%.
 
 
-<img width="755" height="837" alt="graphviz" src="https://github.com/user-attachments/assets/10c74118-2e15-4c60-8ec7-03bb5c50b81d" />
+<img width="500" height="554" alt="graphviz" src="https://github.com/user-attachments/assets/10c74118-2e15-4c60-8ec7-03bb5c50b81d" />
 
 ## Appendix: Optimal mixed strategies
 
