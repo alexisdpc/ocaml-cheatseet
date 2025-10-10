@@ -1,38 +1,20 @@
-# October 2025 - Robot Baseball
+# Robot Baseball
 
-The pitcher can either throw a ball or a strike, while the batter can either wait or swing.\
-Here is the table with the different possibilities:
+The Artificial Automaton Athletics Association (Quad-A) is at it again, to compete with postseason baseball they are developing a Robot Baseball competition. Games are composed of a series of independent at-bats in which the batter is trying to maximize expected score and the pitcher is trying to minimize expected score.
 
-| Batter \\ Pitcher | Ball                    | Strike                                  |
-|:------------------|:-----------------------:|:----------------------------------------:|
-| **Wait**          | $A \equiv V(b+1, s)$     | $B \equiv V(b, s+1)$                      |
-| **Swing**         | $B \equiv V(b, s+1)$     | $D \equiv 4p + (1 - p) V(b, s+1)$        |
+An at-bat is a series of pitches with a running count of balls and strikes, both starting at zero. For each pitch, the pitcher decides whether to throw a ball or strike, and the batter decides whether to wait or swing; these decisions are made secretly and simultaneously. The results of these choices are as follows.
 
+- If the pitcher throws a ball and the batter waits, the count of balls is incremented by 1.
+- If the pitcher throws a strike and the batter waits, the count of strikes is incremented by 1.
+- If the pitcher throws a ball and the batter swings, the count of strikes is incremented by 1.
+- If the pitcher throws a strike and the batter swings, with probability p the batter hits a home run1 and with probability 1-p the count of strikes is incremented by 1.
+  
+An at-bat ends when either:
 
+- The count of balls reaches 4, in which case the batter receives 1 point.
+- The count of strikes reaches 3, in which case the batter receives 0 points.
+- The batter hits a home run, in which case the batter receives 4 points.
+  
+By varying the size of the strike zone, Quad-A can adjust the value p, the probability a pitched strike that is swung at results in a home run. They have found that viewers are most excited by at-bats that reach a full count, that is, the at-bats that reach the state of three balls and two strikes. Let q be the probability of at-bats reaching full count; q is dependent on p. Assume the batter and pitcher are both using optimal mixed strategies and Quad-A has chosen the p that maximizes q. Find this q, the maximal probability at-bats reach full count, to ten decimal places.
 
-- If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
-
-- If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
-
-- At the critical point  $p^* \approx 0.227$, the batter’s threat of a Home Run is just strong enough to induce more balls earlier (raising balls before strikes) but not so strong that at-bats end too quickly with Home Runss. That trade-off peaks the full-count probability near 29.6%.
-
-
-<img width="500" height="554" alt="graphviz" src="https://github.com/user-attachments/assets/10c74118-2e15-4c60-8ec7-03bb5c50b81d" />
-
-## Appendix: Optimal mixed strategies
-
-In a 2x2 zero-sum game with a payoff matrix
-
-|  | $C_1$                | $C_2$                               |
-|:------------------|:-----------------------:|:----------------------------------------:|
-| $R_1$         | $a$     | $b$                      |
-| $R_2$         | $c$     | $d$        |
-
-At a mixed equilibrium the column player chooses the parameters that makes the row player indifferent between 
-$R_1$ and $R_2$ (otherwise the row player would put all probability on the better row). The value of the game (for the row player, here the batter) under mixed strategies can be computed using the formula:
-
-$$\boxed{
-v = \frac{ad-bc}{(a-b) + (d-c)}
-}$$
-
-
+Robot fielding has a long way to go. ↩
