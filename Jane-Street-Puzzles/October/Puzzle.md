@@ -9,6 +9,7 @@ Here is the table with the different possibilities:
 | **Swing**         | $B \equiv V(b, s+1)$     | $D \equiv 4p + (1 - p) V(b, s+1)$        |
 
 
+
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
 - If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
@@ -17,3 +18,19 @@ Here is the table with the different possibilities:
 
 
 <img width="755" height="837" alt="graphviz" src="https://github.com/user-attachments/assets/10c74118-2e15-4c60-8ec7-03bb5c50b81d" />
+
+## Appendix: Optimal mixed strategies
+
+In a 2x2 zero-sum game with a payoff matrix
+
+|  | $C_1$                | $C_2$                               |
+|:------------------|:-----------------------:|:----------------------------------------:|
+| $R_1$         | $a$     | $b)$                      |
+| $R_2$         | $c$     | $d$        |
+
+The value of the game (for the row player, here the batter) under mixed strategies can be computed using the formula:
+
+$$\boxed{
+v = \frac{ad-bc}{(a-b) + (d-c)}
+}$$
+
