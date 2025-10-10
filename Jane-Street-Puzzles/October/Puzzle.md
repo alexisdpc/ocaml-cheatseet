@@ -25,7 +25,7 @@ In a 2x2 zero-sum game with a payoff matrix
 
 |  | $C_1$                | $C_2$                               |
 |:------------------|:-----------------------:|:----------------------------------------:|
-| $R_1$         | $a$     | $b)$                      |
+| $R_1$         | $a$     | $b$                      |
 | $R_2$         | $c$     | $d$        |
 
 The value of the game (for the row player, here the batter) under mixed strategies can be computed using the formula:
@@ -33,4 +33,8 @@ The value of the game (for the row player, here the batter) under mixed strategi
 $$\boxed{
 v = \frac{ad-bc}{(a-b) + (d-c)}
 }$$
+
+At a mixed equilibrium the column player chooses the parameters that makes the row player indifferent between 
+$R_1$ and $R_2$ (otherwise the row player would put all probability on the better row).
+
 
