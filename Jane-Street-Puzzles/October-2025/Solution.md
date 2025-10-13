@@ -21,7 +21,8 @@ The value of the stage game (and hence of the state) is then
 
 $$ V(b,s) = B + (A-B)\frac{p(4-B)}{(A-B)+p(4-B)}  $$
 
-for nonterminal $(b,s)$ . Boundary cases: 
+for nonterminal
+$(b,s)$. Boundary cases: 
 $V(4,s)=1$, 
 $V(b,3)=0$.
 This recursion uniquely determines 
