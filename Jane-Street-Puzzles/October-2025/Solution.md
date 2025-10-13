@@ -17,6 +17,18 @@ $$ x = y = r(b,s) =  \frac{D-B}{(A-2B+D)} = \frac{p(4-B)}{(A-B)+p(4-B)}  $$
 
 where $A \equiv V(b+1, s)$  and $B \equiv V(b, s+1)$.
 
+The value of the stage game (and hence of the state) is then
+
+$$ V(b,s) = B + (A-B)\frac{p(4-B)}{(A-B)+p(4-B)}  $$
+
+for nonterminal $(b,s)$. Boundary cases: 
+$V(4,s)=1$, 
+$V(b,3)=0$.
+This recursion uniquely determines 
+$V(b,s)$ for all 
+$(b,s)$ once 
+$p$ is fixed.
+
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
 - If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
