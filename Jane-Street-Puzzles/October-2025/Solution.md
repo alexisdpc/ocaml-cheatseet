@@ -11,11 +11,11 @@ Here is the table with the different possibilities:
 
 Let the pitcher throw Ball with probability $x$ and the batter Wait with probability $y$.
 In equilibrium the batter must be indifferent between Wait and Swing, and the pitcher indifferent between Ball and Strike. 
-This yields the same expression for both players:
+This yields the same expression for both players (equilibrium probability):
 
 $$ x = y = r(b,s) =  \frac{D-B}{(A-2B+D)} = \frac{p(4-B)}{(A-B)+p(4-B)}  $$
 
-
+where $A \equiv V(b+1, s)$  and $B \equiv V(b, s+1)$.
 
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
