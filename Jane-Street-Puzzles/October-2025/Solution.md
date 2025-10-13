@@ -17,7 +17,7 @@ $$ x = y = r(b,s) =  \frac{D-B}{(A-2B+D)} = \frac{p(4-B)}{(A-B)+p(4-B)}  $$
 
 where $A \equiv V(b+1, s)$  and $B \equiv V(b, s+1)$.
 
-The value of the stage game (and hence of the state) is then
+The value of the stage game (and hence of the state) is then (see appendix for the general 2×2 zero-sum formula)
 
 $$ V(b,s) = B + (A-B)\frac{p(4-B)}{(A-B)+p(4-B)}  $$
 
