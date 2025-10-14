@@ -48,7 +48,7 @@ $$ F(b,s) = r^2 F(b+1, s) + (1 - r^2 - (1-r)^2 p) F(b, s+1)  $$
 
 and the boundary conditions:
 
-$$ F $$
+$$ F(4,s) = F(b,3) = 0 $$
 
 Finally, $q(p)=F(0,0)$ is the desired probability (starting from 0–0) that an at-bat ever hits full count under optimal play. Quad-A wants to choose $p$ that maximizes $q(p)$.
 
