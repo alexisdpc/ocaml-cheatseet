@@ -50,6 +50,8 @@ and the boundary conditions:
 
 $$ F $$
 
+Finally, $q(p)=F(0,0)$ is the desired probability (starting from 0–0) that an at-bat ever hits full count under optimal play. Quad-A wants to choose $p$ that maximizes $q(p)$.
+
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
 - If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
