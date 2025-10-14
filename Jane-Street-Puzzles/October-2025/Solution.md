@@ -40,6 +40,16 @@ Everything else moves to $(b,s+1)$, so
 
 $$ {\rm Pr}()$$
 
+Let F(b,s) be the probability that play starting from 
+(b,s) ever reaches 
+(3,2) before ending (walk, strikeout, or HR), thenwe have that:
+
+$$ F $$ 
+
+and the boundary conditions:
+
+$$ F $$
+
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
 - If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
