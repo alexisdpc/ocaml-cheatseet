@@ -44,7 +44,7 @@ Let $F(b,s)$ be the probability that play starting from
 $(b,s)$ ever reaches 
 (3,2) before ending (walk, strikeout, or HR), thenwe have that:
 
-$$ F $$ 
+$$ F(b,s) = r^2 F(b+1, s) + (1 - r^2 - (1-r)^2 p) F(b, s+1)  $$ 
 
 and the boundary conditions:
 
