@@ -30,6 +30,12 @@ $V(b,s)$ for all
 $(b,s)$ once 
 $p$ is fixed.
 
+At a nonterminal state (b,s) we have that 
+
+$$ Pr( (b,s) \to (b+1,s) \ = r^2 $$ 
+
+$$ Pr( HR) = (1-r^2) p  $$ 
+
 - If $p$ is too small, swinging at a strike is nearly costless; the pitcher then prefers strikes, pushing counts towards 2 strikes before 3 balls — so full counts are rare.
 
 - If $p$ is too large, swinging at a strike often ends the at-bat immediately with a Home Run — again suppressing the chance to reach full count.
