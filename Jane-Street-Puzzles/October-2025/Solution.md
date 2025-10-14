@@ -30,7 +30,7 @@ $V(b,s)$ for all
 $(b,s)$ once 
 $p$ is fixed.
 
-At a nonterminal state $(b,s)$ we have that 
+At a nonterminal state $(b,s)$ we have the following transition probabilities:
 
 $$ {\rm Pr}( (b,s) \to (b+1,s) \ = r^2 $$ 
 
