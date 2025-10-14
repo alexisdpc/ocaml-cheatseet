@@ -40,8 +40,8 @@ Everything else moves to $(b,s+1)$, so
 
 $$ {\rm Pr}()$$
 
-Let F(b,s) be the probability that play starting from 
-(b,s) ever reaches 
+Let $F(b,s)$ be the probability that play starting from 
+$(b,s)$ ever reaches 
 (3,2) before ending (walk, strikeout, or HR), thenwe have that:
 
 $$ F $$ 
