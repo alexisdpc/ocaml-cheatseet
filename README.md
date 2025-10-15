@@ -5,7 +5,7 @@ Here I share some examples that can be useful for people learning the language, 
 - https://try.ocamlpro.com/
 - https://ocsigen.org/js_of_ocaml/latest/manual/files/toplevel/index.html
 
-To check out some algorithms check the [solutions](https://github.com/alexisdpc/ocaml-cheatseet/tree/main/Advent-Of-Code) to the Advent of Code programming challenge.
+To check out some algorithms check the [solutions](https://github.com/alexisdpc/ocaml-cheatseet/tree/main/Advent-Of-Code) to some Jane Street problems or the Advent of Code programming challenge.
 
 ▶ Recursive function tat calculates the sum of elements in a list:
 
