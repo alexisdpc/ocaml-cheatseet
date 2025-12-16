@@ -1,6 +1,6 @@
 ## 1. The original game’s Nash equilibrium (no leak)
 
-Each player, after seeing their first throw \(x\in[0,1]\), chooses:
+Each player, after seeing their first throw $x\in[0,1]$, chooses:
 
 - **Keep**: final distance $= x$
 - **Reroll**: final distance $= \text{new } U[0,1]$ value
