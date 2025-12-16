@@ -59,3 +59,47 @@ So
 $$
 1 - \mathbb{E}[V] = \frac{1 - T + T^2}{2}.
 $$
+
+### 1.2 Best response against threshold $T$
+
+If **your** first throw is $x$ and the opponent uses threshold $T$:
+
+- If you **keep**: win probability is $P(x > V) = F_V(x)$.
+- If you **reroll**: you get a fresh $X_2 \sim U[0,1]$ independent of $V$, so
+
+$$
+P(\text{win} \mid \text{reroll}) = P(X_2 > V) = \mathbb{E}[1 - V] = 1 - \mathbb{E}[V] = \frac{1 - T + T^2}{2}.
+$$
+
+So for each $x$ you keep iff
+
+$$
+F_V(x) \ge \frac{1 - T + T^2}{2}.
+$$
+
+Because $F_V$ is increasing in $x$, the best response is itself a **threshold**:
+
+- keep iff $x \ge j(T)$, where $j(T)$ solves $F_V(j(T)) = \frac{1 - T + T^2}{2}$.
+
+We’ll need this best-response map again later.
+
+Depending on whether the crossing happens below or above $T$, we get:
+
+- If $j(T) < T$: use $F_V(x) = Tx$, so
+
+  $$T j(T) = \frac{1 - T + T^2}{2}
+  \quad\Rightarrow\quad
+  j(T) = \frac{1 - T + T^2}{2T}.$$
+
+- If $j(T) \ge T$: use $F_V(x) = (1+T)x - T$, so
+
+  $$(1+T)j(T) - T = \frac{1 - T + T^2}{2}
+  \quad\Rightarrow\quad
+  j(T) = \frac{1 + T + T^2}{2(1+T)}.$$
+
+One can check that:
+
+- For $T \le (\sqrt5-1)/2$, the crossing is at or above $T$, so the second formula applies.
+- For $T \ge (\sqrt5-1)/2$, the crossing is below $T$, so the first formula applies.
+
+We’ll only need the symmetric case.
