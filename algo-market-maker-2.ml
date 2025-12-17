@@ -23,9 +23,6 @@
    - Zero-allocation hot path (no GC pauses in critical code)
    - Mutable state for performance (avoiding allocation)
    - Fixed-point arithmetic (integers instead of floats for speed)
-   
-   Author: [Your Name]
-   Version: 2.0
    ============================================================================= *)
 
 [@@@warning "-32-27"]  (* Suppress unused value warnings for cleaner output *)
